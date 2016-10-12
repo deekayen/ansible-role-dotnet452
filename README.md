@@ -6,7 +6,7 @@ Install (or uninstall) Microsoft .NET Framework 4.5.2 on Windows.
 Requirements
 ------------
 
-The target Windows machines must have whitelisted Internet access to download the .NET installer from [download.microsoft.com].
+The target Windows machines must have whitelisted Internet access to download the .NET installer from [download.microsoft.com]().
 
 Role Variables
 --------------
