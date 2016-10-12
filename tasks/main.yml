@@ -1,0 +1,29 @@
+---
+
+- block:
+
+  # https://support.microsoft.com/en-us/kb/2901907
+  - name: "Install Microsoft .NET Framework 4.5.2."
+    win_package:
+      path: "https://download.microsoft.com/download/E/2/1/E21644B5-2DF2-47C2-91BD-63C560427900/NDP452-KB2901907-x86-x64-AllOS-ENU.exe"
+      product_id: "{26784146-6E05-3FF9-9335-786C7C0FB5BE}"
+    register: dotnet452_exe
+
+  - debug:
+      var: dotnet452_exe
+      verbosity: 1
+
+  when: dotnet452_uninstall is not defined or not dotnet452_uninstall
+
+- block:
+
+  - name: "Uninstall Microsoft .NET Framework 4.5.2."
+    win_package:
+      raw: Start-Process "C:\Windows\System32\msiexec.exe" -ArgumentList "/x {26784146-6E05-3FF9-9335-786C7C0FB5BE} /qn" -Wait
+    register: dotnet452_removed
+
+  - debug:
+      var: dotnet452_removed
+      verbosity: 1
+
+  when: dotnet452_uninstall is defined and dotnet452_uninstall
