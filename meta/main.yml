@@ -7,8 +7,7 @@ galaxy_info:
   platforms:
   - name: Windows
     versions:
-    - 2008R2
-    - 2012R2
+    - all
   galaxy_tags:
     - windows
 
