@@ -18,8 +18,7 @@
 - block:
 
   - name: "Uninstall Microsoft .NET Framework 4.5.2."
-    win_package:
-      raw: Start-Process "C:\Windows\System32\msiexec.exe" -ArgumentList "/x {26784146-6E05-3FF9-9335-786C7C0FB5BE} /qn" -Wait
+    raw: Start-Process "C:\Windows\System32\msiexec.exe" -ArgumentList "/x {26784146-6E05-3FF9-9335-786C7C0FB5BE} /qn" -Wait
     register: dotnet452_removed
 
   - debug:
