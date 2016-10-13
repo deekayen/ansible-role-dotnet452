@@ -39,6 +39,8 @@ Example Install
         }
     }
 
+Because the uninstall task uses Ansible's `raw` module, the play output will always report `ok` status instead of `changed`. The playbook may also complete before the msiexec process has completely finished uninstalling the framework.
+
 ### Windows 2008R2
 
 Microsoft .NET Framework must exist already on Windows 2008R2 for Ansible to connect and invoke Powershell. This module will confirm that the desired version is installed.
