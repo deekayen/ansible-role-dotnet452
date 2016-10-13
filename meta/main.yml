@@ -1,7 +1,6 @@
 galaxy_info:
   author: David Norman
   description: Install (or uninstall) Microsoft .NET Framework 4.5.2.
-  company: CiOX Health
   license: BSD
   min_ansible_version: 2.1
   platforms:
