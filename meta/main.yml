@@ -1,12 +1,19 @@
 galaxy_info:
+  role_name: dotnet452
   author: David Norman
   description: Install (or uninstall) Microsoft .NET Framework 4.5.2.
   license: BSD
+
+  github_branch: main
+  issue_tracker_url: https://github.com/deekayen/ansible-role-dotnet452/issues
+
   min_ansible_version: 2.1
+
   platforms:
-  - name: Windows
-    versions:
-    - all
+    - name: Windows
+      versions:
+        - all
+
   galaxy_tags:
     - windows
 
