@@ -1,5 +1,8 @@
+---
+
 galaxy_info:
   role_name: dotnet452
+  namespace: deekayen
   author: David Norman
   description: Install (or uninstall) Microsoft .NET Framework 4.5.2.
   license: BSD
@@ -15,6 +18,7 @@ galaxy_info:
         - all
 
   galaxy_tags:
+    - dotnet
     - windows
 
 dependencies: []

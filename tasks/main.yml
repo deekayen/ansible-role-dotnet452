@@ -9,7 +9,8 @@
       product_id: "{26784146-6E05-3FF9-9335-786C7C0FB5BE}"
     register: dotnet452_exe
 
-  - debug:
+  - name: "Debug: Install output."
+    debug:
       var: dotnet452_exe
       verbosity: 1
 
@@ -21,7 +22,8 @@
     raw: Start-Process "C:\Windows\System32\msiexec.exe" -ArgumentList "/x {26784146-6E05-3FF9-9335-786C7C0FB5BE} /qn" -Wait
     register: dotnet452_removed
 
-  - debug:
+  - name: "Debug: Uninstall output."
+    debug:
       var: dotnet452_removed
       verbosity: 1
 
